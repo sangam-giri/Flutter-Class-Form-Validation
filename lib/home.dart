@@ -21,6 +21,7 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: [
                   TextFormField(
+                    textInputAction: TextInputAction.next,
                     validator: ((value) {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter Something';
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter Something';
                       }
-                      if (!value!.contains('@')) {
+                      if (!value.contains('@')) {
                         return 'Please enter valid email';
                       }
                     }),
